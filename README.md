@@ -1,12 +1,12 @@
 # Cracking the Coding Interview
 
 #### Chapter 1 
-- [ ] 1.1 - Is Unique
-- [ ] 1.2 - Check Permutation
-- [ ] 1.3 - URLify
-- [ ] 1.4 - Palindrome Permutation
-- [ ] 1.5 - One Away
-- [ ] 1.6 - String Compression
+- [X] 1.1 - Is Unique
+- [X] 1.2 - Check Permutation
+- [X] 1.3 - URLify
+- [X] 1.4 - Palindrome Permutation
+- [X] 1.5 - One Away
+- [X] 1.6 - String Compression
 - [ ] 1.7 - Rotate Matrix
 - [ ] 1.8 - Zero Matrix
 - [ ] 1.9 - String Rotation 
