@@ -8,8 +8,8 @@
 - [X] 1.5 - One Away
 - [X] 1.6 - String Compression
 - [ ] 1.7 - Rotate Matrix
-- [ ] 1.8 - Zero Matrix
-- [ ] 1.9 - String Rotation 
+- [X] 1.8 - Zero Matrix
+- [X] 1.9 - String Rotation 
 
 #### Chapter 2 
 - [ ] 2.1 - Remove Dups
