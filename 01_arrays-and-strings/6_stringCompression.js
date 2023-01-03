@@ -6,7 +6,7 @@
 // string. You can assume the string has only uppercase 
 // and lowercase letters (a - z).
 
-function stringCompression(givenString) {
+function compressString(givenString) {
   let compressedString = ''
   let sequenceCounter = 0
 
@@ -26,6 +26,6 @@ function stringCompression(givenString) {
 }
 
 // Test cases:
-console.log(stringCompression('aabcccccaaa')) // a2b1c5a3
-console.log(stringCompression('abcd')) // abcd
-console.log(stringCompression('aAbbbbb')) // a1A1b5
+console.log(compressString('aabcccccaaa')) // a2b1c5a3
+console.log(compressString('abcd')) // abcd
+console.log(compressString('aAbbbbb')) // a1A1b5

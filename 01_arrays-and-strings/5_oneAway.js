@@ -4,60 +4,56 @@
 // function to check if they are one edit (or zero edits) 
 // away.
 
-function getRepresentation(givenString) {
-  const representation = {}
-
-  for (const char of givenString) {
-    if (!(char in representation)) {
-      representation[char] = 0
-    }
-    representation[char] += 1
+function areOneEditAway(givenString, otherString) {
+  if (givenString.length === otherString.length) {
+    return areOneReplacementAway(givenString, otherString)
+  } else if (givenString.length + 1 === otherString.length) {
+    return areOneInsertionAway(givenString, otherString)
+  } else if (givenString.length - 1 === otherString.length) {
+    return areOneInsertionAway(otherString, givenString)
   }
 
-  return representation
+  return false
 }
 
-function swap(a, b) {
-  const temporaryA = a
-  a = b
-  b = temporaryA
-
-  return [a, b]
-}
-
-function oneAway(givenString, otherString) {
-  const lengthDiff = 
-    Math.abs(givenString.length - otherString.length)
-  if (lengthDiff > 1) return false
-
-  let representation = getRepresentation(givenString)
-  let otherRepresentation = getRepresentation(otherString)
+function areOneReplacementAway(givenString, otherString) {
   let hasMetOneMismatch = false
 
-  if (Object.keys(representation).length < 
-      Object.keys(otherRepresentation).length) {
-    [representation, otherRepresentation] = 
-      swap(representation, otherRepresentation)
-  }
-
-  for (const key of Object.keys(representation)) {
-    if (!(key in otherRepresentation) || 
-        representation[key] !== otherRepresentation[key]) {
-      if (!hasMetOneMismatch) {
-        hasMetOneMismatch = true
-      } else {
+  for (let i = 0; i < givenString.length; i++) {
+    if (givenString[i] !== otherString[i]) {
+      if (hasMetOneMismatch) {
         return false
       }
+      hasMetOneMismatch = true
     }
   }
 
   return true
 }
 
+function areOneInsertionAway(shorterString, longerString) {
+  let index1 = 0
+  let index2 = 0
+
+  while ((index1 < shorterString.length) && (index2 < longerString.length)) {
+    if (shorterString[index1] === longerString[index2]) {
+      index1 += 1
+      index2 += 1
+      continue
+    }
+    if (index1 !== index2) {
+      return false
+    }
+    index2 += 1
+  }
+
+  return true
+}
+
 // Test cases:
-console.log(oneAway('abc', 'abc')) // true
-console.log(oneAway('abcd', 'bcd')) // true
-console.log(oneAway('dog', 'doc')) // true
-console.log(oneAway('dog', 'Dogs')) // false
-console.log(oneAway('dog', 'dooog')) // false
-console.log(oneAway('rock', 'crocs')) // false
+console.log(areOneEditAway('abc', 'abc')) // true
+console.log(areOneEditAway('dog', 'doc')) // true
+console.log(areOneEditAway('abcd', 'bcd')) // true
+console.log(areOneEditAway('dog', 'Dogs')) // false
+console.log(areOneEditAway('dog', 'dooog')) // false
+console.log(areOneEditAway('rock', 'crocs')) // false

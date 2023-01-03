@@ -1,6 +1,6 @@
 # Cracking the Coding Interview
 
-#### Chapter 1 
+#### Chapter 1 — Arrays and Strings
 - [X] 1.1 - Is Unique
 - [X] 1.2 - Check Permutation
 - [X] 1.3 - URLify
@@ -11,7 +11,7 @@
 - [X] 1.8 - Zero Matrix
 - [X] 1.9 - String Rotation 
 
-#### Chapter 2 
+#### Chapter 2 — Linked Lists
 - [ ] 2.1 - Remove Dups
 - [ ] 2.2 - Return Kth to Last
 - [ ] 2.3 - Delete Middle Node
@@ -21,7 +21,7 @@
 - [ ] 2.7 - Intersection
 - [ ] 2.8 - Loop Detection
 
-#### Chapter 3 
+#### Chapter 3 — Stacks and Queues
 - [ ] 3.1 - Three in One
 - [ ] 3.2 - Stack Min
 - [ ] 3.3 - Stack of Plates
@@ -29,7 +29,7 @@
 - [ ] 3.5 - Sort Stack
 - [ ] 3.6 - Animal Shelter
 
-#### Chapter 4
+#### Chapter 4 — Trees and Graphs
 - [ ] 4.1 - Route Between Nodes
 - [ ] 4.2 - Minimal Tree
 - [ ] 4.3 - List of Depths
@@ -43,7 +43,7 @@
 - [ ] 4.11 - Random Node
 - [ ] 4.12 - Paths with Sum
 
-#### Chapter 5
+#### Chapter 5 — Bit Manipulation
 - [ ] 5.1 - Insertion
 - [ ] 5.2 - Binary to String
 - [ ] 5.3 - Flip Bit To Win
@@ -53,7 +53,7 @@
 - [ ] 5.7 - Pairwise Swap
 - [ ] 5.8 - Draw Line
 
-#### Chapter 6
+#### Chapter 6 — Math and Logic Puzzles
 - [ ] 6.1 - Heavy Pill
 - [ ] 6.2 - Basketball
 - [ ] 6.3 - Dominos
@@ -65,7 +65,7 @@
 - [ ] 6.9 - 100 Lockers
 - [ ] 6.10 - Poison
 
-#### Chapter 7
+#### Chapter 7 — Object-Oriented Design
 - [ ] 7.1 - Deck of Cards
 - [ ] 7.2 - Call Center
 - [ ] 7.3 - Jukebox
@@ -79,7 +79,7 @@
 - [ ] 7.11 - File System
 - [ ] 7.12 - Hash Table
 
-#### Chapter 8
+#### Chapter 8 — Recursion and Dynamic Programming
 - [ ] 8.1 - Triple Step
 - [ ] 8.2 - Robot in a Grid
 - [ ] 8.3 - Magic Index
@@ -95,7 +95,7 @@
 - [ ] 8.13 - Stack Boxes
 - [ ] 8.14 - Boolean Eval
 
-#### Chapter 9
+#### Chapter 9 — System Design and Scalability
 - [ ] 9.1 - Stock Data
 - [ ] 9.2 - Social Network
 - [ ] 9.3 - Web Crawler
@@ -105,7 +105,7 @@
 - [ ] 9.7 - Personal Financial Manager
 - [ ] 9.8 - Paste Bin
 
-#### Chapter 10
+#### Chapter 10 — Sorting and Searching
 - [ ] 10.1 - Sorted Merge
 - [ ] 10.2 - Group Anagrams
 - [ ] 10.3 - Search In Rotated Array

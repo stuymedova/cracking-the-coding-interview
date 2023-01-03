@@ -2,7 +2,7 @@
 // all unique characters. What if you cannot use 
 // additional data structures?
 
-function isUnique(givenString) {
+function isUniqueChars(givenString) {
   const characters = [...givenString]
   characters.sort()
 
@@ -16,8 +16,8 @@ function isUnique(givenString) {
 }
 
 // Test cases:
-console.log(isUnique('abcd')) // true
-console.log(isUnique('aAbB')) // true
-console.log(isUnique('aabcd')) // false
-console.log(isUnique('abbcd')) // false
-console.log(isUnique('abcdd')) // false
+console.log(isUniqueChars('abcd')) // true
+console.log(isUniqueChars('aAbB')) // true
+console.log(isUniqueChars('aabcd')) // false
+console.log(isUniqueChars('abbcd')) // false
+console.log(isUniqueChars('abcdd')) // false
