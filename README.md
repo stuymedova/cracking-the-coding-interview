@@ -12,7 +12,7 @@
 - [X] 1.9 - String Rotation 
 
 #### Chapter 2 — Linked Lists
-- [ ] 2.1 - Remove Dups
+- [X] 2.1 - Remove Dups
 - [ ] 2.2 - Return Kth to Last
 - [ ] 2.3 - Delete Middle Node
 - [ ] 2.4 - Partition
