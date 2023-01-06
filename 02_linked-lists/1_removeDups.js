@@ -22,6 +22,7 @@ function removeDups(head) {
   return head
 }
 
+
 // Test cases:
 const linkedList = new SinglyLinkedListNode(1)
 linkedList

@@ -25,6 +25,7 @@ function getKthToLast(head, tailOffset) {
   return slowPointer
 }
 
+
 // Test cases:
 const linkedList = new SinglyLinkedListNode(1)
 linkedList
