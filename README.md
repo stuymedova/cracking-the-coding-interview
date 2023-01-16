@@ -13,8 +13,8 @@
 
 #### Chapter 2 — Linked Lists
 - [X] 2.1 - Remove Dups
-- [ ] 2.2 - Return Kth to Last
-- [ ] 2.3 - Delete Middle Node
+- [X] 2.2 - Return Kth to Last
+- [X] 2.3 - Delete Middle Node
 - [ ] 2.4 - Partition
 - [ ] 2.5 - Sum Lists
 - [X] 2.6 - Palindrome
@@ -43,42 +43,6 @@
 - [ ] 4.11 - Random Node
 - [ ] 4.12 - Paths with Sum
 
-#### Chapter 5 — Bit Manipulation
-- [ ] 5.1 - Insertion
-- [ ] 5.2 - Binary to String
-- [ ] 5.3 - Flip Bit To Win
-- [ ] 5.4 - Next Number
-- [ ] 5.5 - Debugger
-- [ ] 5.6 - Conversion
-- [ ] 5.7 - Pairwise Swap
-- [ ] 5.8 - Draw Line
-
-#### Chapter 6 — Math and Logic Puzzles
-- [ ] 6.1 - Heavy Pill
-- [ ] 6.2 - Basketball
-- [ ] 6.3 - Dominos
-- [ ] 6.4 - Ants on a Triangle
-- [ ] 6.5 - Jugs of Water
-- [ ] 6.6 - Blue-Eyed Island
-- [ ] 6.7 - The Apocalypse
-- [ ] 6.8 - The Egg Drop Problem
-- [ ] 6.9 - 100 Lockers
-- [ ] 6.10 - Poison
-
-#### Chapter 7 — Object-Oriented Design
-- [ ] 7.1 - Deck of Cards
-- [ ] 7.2 - Call Center
-- [ ] 7.3 - Jukebox
-- [ ] 7.4 - Parking Lot
-- [ ] 7.5 - Online Book Reader
-- [ ] 7.6 - Jigsaw
-- [ ] 7.7 - Chat Server
-- [ ] 7.8 - Othello
-- [ ] 7.9 - Circular Array
-- [ ] 7.10 - Minesweeper
-- [ ] 7.11 - File System
-- [ ] 7.12 - Hash Table
-
 #### Chapter 8 — Recursion and Dynamic Programming
 - [ ] 8.1 - Triple Step
 - [ ] 8.2 - Robot in a Grid
@@ -94,16 +58,6 @@
 - [ ] 8.12 - Eight Queens
 - [ ] 8.13 - Stack Boxes
 - [ ] 8.14 - Boolean Eval
-
-#### Chapter 9 — System Design and Scalability
-- [ ] 9.1 - Stock Data
-- [ ] 9.2 - Social Network
-- [ ] 9.3 - Web Crawler
-- [ ] 9.4 - Duplicate URLs
-- [ ] 9.5 - Cache
-- [ ] 9.6 - Sales Rank
-- [ ] 9.7 - Personal Financial Manager
-- [ ] 9.8 - Paste Bin
 
 #### Chapter 10 — Sorting and Searching
 - [ ] 10.1 - Sorted Merge
