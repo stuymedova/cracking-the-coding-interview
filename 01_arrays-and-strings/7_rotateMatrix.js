@@ -12,8 +12,8 @@ const matrix = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
-]
-console.log(rotateMatrix(matrix))
+];
+console.log(rotateMatrix(matrix));
 // [
 //   [7, 4, 1],
 //   [8, 5, 2],
@@ -25,8 +25,8 @@ const matrix2 = [
   [5, 6, 7, 8],
   [9, 1, 2, 3],
   [4, 5, 6, 7]
-]
-console.log(rotateMatrix(matrix2))
+];
+console.log(rotateMatrix(matrix2));
 // [
 //   [4, 9, 5, 1],
 //   [5, 1, 6, 2],

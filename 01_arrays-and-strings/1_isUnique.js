@@ -3,21 +3,21 @@
 // additional data structures?
 
 function isUniqueChars(givenString) {
-  const characters = [...givenString]
-  characters.sort()
+  const characters = [...givenString];
+  characters.sort();
 
   for (let i = 0; i < characters.length - 1; i++) {
     if (characters[i] === characters[i + 1]) {
-      return false
+      return false;
     }
   }
 
-  return true
+  return true;
 }
 
 // Test cases:
-console.log(isUniqueChars('abcd')) // true
-console.log(isUniqueChars('aAbB')) // true
-console.log(isUniqueChars('aabcd')) // false
-console.log(isUniqueChars('abbcd')) // false
-console.log(isUniqueChars('abcdd')) // false
+console.log(isUniqueChars('abcd')); // true
+console.log(isUniqueChars('aAbB')); // true
+console.log(isUniqueChars('aabcd')); // false
+console.log(isUniqueChars('abbcd')); // false
+console.log(isUniqueChars('abcdd')); // false

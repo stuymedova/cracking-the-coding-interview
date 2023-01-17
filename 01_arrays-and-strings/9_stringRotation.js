@@ -8,31 +8,32 @@ function isRotation(rotatedString, string) {
   if ((rotatedString.length !== string.length) ||
       (rotatedString.length === 0) ||
       (string.length === 0)) {
-    return false
+    return false;
   }
-  return isSubstring(rotatedString, string + string)
+  return isSubstring(rotatedString, string + string);
 }
 
 function isSubstring(substring, string) {
   if (substring.length > string.length) {
-    return false
+    return false;
   }
-  let numberOfMatchedChars = 0
+  
+  let numberOfMatchedChars = 0;
   for (let i = 0; i < string.length; i++) {
     if (string[i] === substring[numberOfMatchedChars]) {
-      numberOfMatchedChars += 1
+      numberOfMatchedChars += 1;
     } else if (numberOfMatchedChars > 0) {
-      numberOfMatchedChars = 0
-      continue
+      numberOfMatchedChars = 0;
+      continue;
     }
     if (numberOfMatchedChars === substring.length) {
-      return true
+      return true;
     }
   }
-  return false
+  return false;
 }
 
 // Test cases: 
-console.log(isRotation('erbottlewat', 'waterbottle')) // true
-console.log(isRotation('erbottletle', 'waterbottle')) // false
-console.log(isRotation('bottle', 'waterbottle')) // false
+console.log(isRotation('erbottlewat', 'waterbottle')); // true
+console.log(isRotation('erbottletle', 'waterbottle')); // false
+console.log(isRotation('bottle', 'waterbottle')); // false
