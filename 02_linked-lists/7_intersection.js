@@ -1,20 +1,122 @@
-function intersection(head, otherHead) {
+// Given two (singly) linked lists, determine if the two 
+// lists intersect. Return the intersecting node. Note 
+// that the intersection is defined based on reference, 
+// not value. That is, if the kth node of the first linked 
+// list is the exact same node (by reference) as the jth 
+// node of the second linked list, then they are 
+// intersecting.
+
+import SinglyLinkedListNode from './utils/SinglyLinkedListNode.js';
+
+// METHOD 1
+function findIntersection(head, otherHead) {
+  traverseList(head, (node) => { node.visited = true });
+  return traverseList(otherHead, null, (node) => {
+    if (node.visited === true) { 
+      return true; 
+    }
+    return false;
+  });
+}
+
+function traverseList(head, runAction = null, applyEarlyExitCondition = null) {
   let currentNode = head;
-  const hashTable = new HashTable();
 
   while (currentNode !== null) {
-    hashTable.add(currentNode);
-    currentNode = currentNode.next;
-  }
-
-  currentNode = otherHead;
-
-  while (currentNode !== null) {
-    if (hashTable.has(currentNode)) {
-      return currentNode;
+    if (applyEarlyExitCondition) {
+      const isEarlyExitConditionSatisfied = applyEarlyExitCondition(currentNode);
+      if (isEarlyExitConditionSatisfied) {
+        return currentNode;
+      }
+    }
+    if (runAction) {
+      runAction(currentNode);
     }
     currentNode = currentNode.next;
   }
-  
-  return false;
+
+  return null;
 }
+
+// METHOD 2
+function findIntersection2(head, otherHead) {
+  if (head === null || otherHead === null) {
+    return null;
+  }
+
+  const result1 = getTailAndLength(head);
+  const result2 = getTailAndLength(otherHead);
+
+  if (result1.tail !== result2.tail) {
+    return null;
+  }
+
+  let shorterList = (result1.length < result2.length) ? head : otherHead;
+  let longerList = (result1.length < result2.length) ? otherHead : head;
+
+  longerList = getKthNode(longerList, Math.abs(result1.length - result2.length));
+
+  while (shorterList !== longerList) {
+    shorterList = shorterList.next;
+    longerList = longerList.next;
+  }
+
+  return shorterList;
+}
+
+function getTailAndLength(head) {
+  let currentNode = head;
+  let counter = 0;
+  
+  while (currentNode.next !== null) {
+    counter += 1;
+    currentNode = currentNode.next;
+  }
+  counter += 1; // Count the tail node.
+
+  return { tail: currentNode, length: counter };
+}
+
+function getKthNode(head, k) {
+  let currentNode = head;
+
+  for (let i = 0; i < k; i++) {
+    currentNode = currentNode.next;
+  }
+  return currentNode;
+}
+
+
+// Test cases:
+const commonNode = new SinglyLinkedListNode(2);
+const linkedList = new SinglyLinkedListNode(1);
+linkedList
+  .append(new SinglyLinkedListNode(5))
+  .append(new SinglyLinkedListNode(3))
+  .append(commonNode)
+  .append(new SinglyLinkedListNode(3));
+const linkedList2 = new SinglyLinkedListNode(9);
+linkedList2
+  .append(new SinglyLinkedListNode(8))
+  .append(commonNode);
+console.log(findIntersection(linkedList, linkedList2));
+// {
+//   value: 2,
+//   next: { 
+//     value: 3, 
+//     next: null
+//   }
+// }
+
+const otherLinkedList = new SinglyLinkedListNode(1);
+otherLinkedList
+  .append(new SinglyLinkedListNode(5))
+  .append(new SinglyLinkedListNode(3))
+  .append(new SinglyLinkedListNode(2))
+  .append(new SinglyLinkedListNode(3));
+const otherLinkedList2 = new SinglyLinkedListNode(9);
+otherLinkedList2
+  .append(new SinglyLinkedListNode(8))
+  .append(new SinglyLinkedListNode(2));
+console.log(findIntersection(otherLinkedList, otherLinkedList2));
+// null
