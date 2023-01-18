@@ -18,11 +18,11 @@
 - [ ] 2.4 - Partition
 - [ ] 2.5 - Sum Lists
 - [X] 2.6 - Palindrome
-- [ ] 2.7 - Intersection
-- [ ] 2.8 - Loop Detection
+- [X] 2.7 - Intersection
+- [X] 2.8 - Loop Detection
 
 #### Chapter 3 — Stacks and Queues
-- [ ] 3.1 - Three in One
+- [X] 3.1 - Three in One
 - [ ] 3.2 - Stack Min
 - [ ] 3.3 - Stack of Plates
 - [ ] 3.4 - Queue via Stacks
