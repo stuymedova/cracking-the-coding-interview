@@ -10,9 +10,9 @@ import SinglyLinkedListNode from './utils/SinglyLinkedListNode.js';
 
 // METHOD 1
 function findIntersection(head, otherHead) {
-  traverseList(head, (node) => { node.visited = true });
+  traverseList(head, (node) => { node.isVisited = true });
   return traverseList(otherHead, null, (node) => {
-    if (node.visited === true) { 
+    if (node.isVisited === true) { 
       return true; 
     }
     return false;
@@ -88,8 +88,8 @@ function getKthNode(head, k) {
 
 
 // Test cases:
-const commonNode = new SinglyLinkedListNode(2);
 const linkedList = new SinglyLinkedListNode(1);
+const commonNode = new SinglyLinkedListNode(2);
 linkedList
   .append(new SinglyLinkedListNode(5))
   .append(new SinglyLinkedListNode(3))
