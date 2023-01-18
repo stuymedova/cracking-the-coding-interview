@@ -1,6 +1,8 @@
 // Describe how you could use a single array to implement 
 // three stacks.
 
+// Assumption: I cannot have nested arrays.
+// 
 // I would use indexes where each first element belongs 
 // to the first stack, each second element — to the 
 // second, and each third — to the third one. I would 
