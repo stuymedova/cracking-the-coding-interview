@@ -1,5 +1,7 @@
-// Implement a function to check if a linked list is a 
-// palindrome.
+/**
+ * Implement a function to check if a linked list is a 
+ * palindrome.
+ */
 
 import SinglyLinkedListNode from './utils/SinglyLinkedListNode.js';
 

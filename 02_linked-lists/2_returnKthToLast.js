@@ -1,8 +1,10 @@
-// Implement an algorithm to find the kth to last element 
-// of a Singly Linked List.
-// 
-// Note: k is defined such that passing k = 1 returns 
-// the last element.
+/**
+ * Implement an algorithm to find the kth to last element 
+ * of a Singly Linked List.
+ * 
+ * Note: k is defined such that passing k = 1 returns 
+ * the last element.
+ */
 
 import SinglyLinkedListNode from './utils/SinglyLinkedListNode.js';
 

@@ -1,5 +1,7 @@
-// Write code to remove duplicates from an unsorted 
-// Linked List.
+/**
+ * Write code to remove duplicates from an unsorted 
+ * Linked List.
+ */
 
 import SinglyLinkedListNode from './utils/SinglyLinkedListNode.js';
 
