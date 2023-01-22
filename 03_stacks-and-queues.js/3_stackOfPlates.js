@@ -19,6 +19,7 @@
 class SetOfStacks {
   constructor(threshold) {
     this.stack = new Stack();
+    this.stackIndex = 0;
     this.threshold = threshold;
   }
 
@@ -28,6 +29,8 @@ class SetOfStacks {
       this.stack.next = newStack;
       newStack.previous = this.stack;
       this.stack = newStack;
+      this.stackIndex += 1
+      this.stack.stackIndex = this.stackIndex;
     }
     this.stack.push(value);
     return this;
@@ -38,6 +41,27 @@ class SetOfStacks {
     if (this.stack.length === 0) {
       this.stack = this.stack.previous;
       this.stack.next = null;
+      this.stackIndex -= 1;
+      this.stack.stackIndex = this.stackIndex;
+    }
+    return removedElement;
+  }
+
+  popAt(index) {
+    if (index === this.stackIndex) {
+      return this.pop();
+    }
+
+    let currentStack = this.stack;    
+    while (currentStack.stackIndex !== index) {
+      currentStack = currentStack.previous;
+    }
+    const removedElement = currentStack.pop();
+    if (this.stack.length === 0) {
+      this.stack = this.stack.previous;
+      this.stack.next = null;
+      this.stackIndex -= 1;
+      this.stack.stackIndex = this.stackIndex;
     }
     return removedElement;
   }
@@ -53,6 +77,7 @@ class Stack {
     this.length = 0;
     this.previous = null;
     this.next = null;
+    this.stackIndex = null;
   }
 
   push(value) {
@@ -64,10 +89,20 @@ class Stack {
   pop() {
     const removedElement = this.stack.pop();
     this.length -= 1;
+    if (this.next) {
+      this.rebalance();
+    }
     return removedElement;
   }
 
   peek() {
     return this.stack[this.length - 1];
+  }
+
+  rebalance() {
+    if (this.next) {
+      this.stack.push(this.next.stack.shift());
+      this.next.rebalance();
+    }
   }
 }
