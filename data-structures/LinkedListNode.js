@@ -1,3 +1,5 @@
+// Linked List Node (Singly Linked List)
+
 export default class LinkedListNode {
   constructor(value) {
     this.value = value;
