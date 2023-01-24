@@ -8,7 +8,7 @@
  * intersecting.
  */
 
-import SinglyLinkedListNode from './utils/SinglyLinkedListNode.js';
+import LinkedListNode from '../data-structures/LinkedListNode.js';
 
 // METHOD 1
 function findIntersection(head, otherHead) {
@@ -90,16 +90,16 @@ function getKthNode(head, k) {
 
 
 // Test cases:
-const linkedList = new SinglyLinkedListNode(1);
-const commonNode = new SinglyLinkedListNode(2);
+const linkedList = new LinkedListNode(1);
+const commonNode = new LinkedListNode(2);
 linkedList
-  .append(new SinglyLinkedListNode(5))
-  .append(new SinglyLinkedListNode(3))
+  .append(new LinkedListNode(5))
+  .append(new LinkedListNode(3))
   .append(commonNode)
-  .append(new SinglyLinkedListNode(3));
-const linkedList2 = new SinglyLinkedListNode(9);
+  .append(new LinkedListNode(3));
+const linkedList2 = new LinkedListNode(9);
 linkedList2
-  .append(new SinglyLinkedListNode(8))
+  .append(new LinkedListNode(8))
   .append(commonNode);
 console.log(findIntersection(linkedList, linkedList2));
 // {
@@ -110,15 +110,15 @@ console.log(findIntersection(linkedList, linkedList2));
 //   }
 // }
 
-const otherLinkedList = new SinglyLinkedListNode(1);
+const otherLinkedList = new LinkedListNode(1);
 otherLinkedList
-  .append(new SinglyLinkedListNode(5))
-  .append(new SinglyLinkedListNode(3))
-  .append(new SinglyLinkedListNode(2))
-  .append(new SinglyLinkedListNode(3));
-const otherLinkedList2 = new SinglyLinkedListNode(9);
+  .append(new LinkedListNode(5))
+  .append(new LinkedListNode(3))
+  .append(new LinkedListNode(2))
+  .append(new LinkedListNode(3));
+const otherLinkedList2 = new LinkedListNode(9);
 otherLinkedList2
-  .append(new SinglyLinkedListNode(8))
-  .append(new SinglyLinkedListNode(2));
+  .append(new LinkedListNode(8))
+  .append(new LinkedListNode(2));
 console.log(findIntersection(otherLinkedList, otherLinkedList2));
 // null

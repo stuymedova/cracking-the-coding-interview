@@ -3,7 +3,7 @@
  * palindrome.
  */
 
-import SinglyLinkedListNode from './utils/SinglyLinkedListNode.js';
+import LinkedListNode from '../data-structures/LinkedListNode.js';
 
 // Note: node.data cannot be equal to NaN because
 // NaN !== NaN (comparison operation would return 
@@ -19,7 +19,7 @@ function reverseList(givenHead) {
   let head = null;
 
   while (givenHead !== null) {
-    const node = new SinglyLinkedListNode(givenHead.value);
+    const node = new LinkedListNode(givenHead.value);
     node.next = head;
     head = node;
     givenHead = givenHead.next;
@@ -43,33 +43,33 @@ function isEqual(head, otherHead) {
 
 
 // Test cases:
-const linkedList = new SinglyLinkedListNode('a');
+const linkedList = new LinkedListNode('a');
 linkedList
-  .append(new SinglyLinkedListNode('b'))
-  .append(new SinglyLinkedListNode('c'))
-  .append(new SinglyLinkedListNode('c'))
-  .append(new SinglyLinkedListNode('b'))
-  .append(new SinglyLinkedListNode('a'));
+  .append(new LinkedListNode('b'))
+  .append(new LinkedListNode('c'))
+  .append(new LinkedListNode('c'))
+  .append(new LinkedListNode('b'))
+  .append(new LinkedListNode('a'));
 console.log(isPalindrome(linkedList)); // true
 
-const linkedList2 = new SinglyLinkedListNode('a');
+const linkedList2 = new LinkedListNode('a');
 linkedList2
-  .append(new SinglyLinkedListNode('b'))
-  .append(new SinglyLinkedListNode('c'))
-  .append(new SinglyLinkedListNode('b'))
-  .append(new SinglyLinkedListNode('a'));
+  .append(new LinkedListNode('b'))
+  .append(new LinkedListNode('c'))
+  .append(new LinkedListNode('b'))
+  .append(new LinkedListNode('a'));
 console.log(isPalindrome(linkedList2)); // true
 
-const linkedList3 = new SinglyLinkedListNode('a');
+const linkedList3 = new LinkedListNode('a');
 linkedList3
-  .append(new SinglyLinkedListNode('b'))
-  .append(new SinglyLinkedListNode('c'))
-  .append(new SinglyLinkedListNode('d'));
+  .append(new LinkedListNode('b'))
+  .append(new LinkedListNode('c'))
+  .append(new LinkedListNode('d'));
 console.log(isPalindrome(linkedList3)); // false
 
-const linkedList4 = new SinglyLinkedListNode('d');
+const linkedList4 = new LinkedListNode('d');
 linkedList4
-  .append(new SinglyLinkedListNode('b'))
-  .append(new SinglyLinkedListNode('c'))
-  .append(new SinglyLinkedListNode('d'));
+  .append(new LinkedListNode('b'))
+  .append(new LinkedListNode('c'))
+  .append(new LinkedListNode('d'));
 console.log(isPalindrome(linkedList4)); // false

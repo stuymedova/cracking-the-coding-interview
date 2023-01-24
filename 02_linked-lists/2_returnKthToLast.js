@@ -6,7 +6,7 @@
  * the last element.
  */
 
-import SinglyLinkedListNode from './utils/SinglyLinkedListNode.js';
+import LinkedListNode from '../data-structures/LinkedListNode.js';
 
 function getKthToLast(head, tailOffset) {
   let fastPointer = head;
@@ -29,10 +29,10 @@ function getKthToLast(head, tailOffset) {
 
 
 // Test cases:
-const linkedList = new SinglyLinkedListNode(1);
+const linkedList = new LinkedListNode(1);
 linkedList
-  .append(new SinglyLinkedListNode(5))
-  .append(new SinglyLinkedListNode(3));
+  .append(new LinkedListNode(5))
+  .append(new LinkedListNode(3));
 
 const kthToLastElement = getKthToLast(linkedList, 1);
 console.log(JSON.stringify(kthToLastElement, null, 4));

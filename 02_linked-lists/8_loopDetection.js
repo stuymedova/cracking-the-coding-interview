@@ -12,7 +12,7 @@
  * Output: C
  */
 
-import SinglyLinkedListNode from './utils/SinglyLinkedListNode.js';
+import LinkedListNode from '../data-structures/LinkedListNode.js';
 
 // METHOD 1
 function detectLoop(head) {
@@ -42,12 +42,12 @@ function detectLoop2(head) {
 }
 
 // Test case:
-const linkedList = new SinglyLinkedListNode(1);
-const node = new SinglyLinkedListNode(3);
+const linkedList = new LinkedListNode(1);
+const node = new LinkedListNode(3);
 linkedList
-  .append(new SinglyLinkedListNode(5))
+  .append(new LinkedListNode(5))
   .append(node)
-  .append(new SinglyLinkedListNode(2))
+  .append(new LinkedListNode(2))
   .append(node);
 console.log(detectLoop(linkedList));
 // {

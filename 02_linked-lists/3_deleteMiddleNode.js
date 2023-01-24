@@ -9,7 +9,7 @@
  * Result: nothing is returned, but the new linked list looks like a->b->d->e->f
  */
 
-import SinglyLinkedListNode from './utils/SinglyLinkedListNode.js';
+import LinkedListNode from '../data-structures/LinkedListNode.js';
 
 function deleteMiddleNode(node) {
   // Node is a tail
@@ -22,12 +22,12 @@ function deleteMiddleNode(node) {
 
 
 // Test cases:
-const linkedList = new SinglyLinkedListNode(1);
-const givenNode = new SinglyLinkedListNode(3);
+const linkedList = new LinkedListNode(1);
+const givenNode = new LinkedListNode(3);
 linkedList
-  .append(new SinglyLinkedListNode(5))
+  .append(new LinkedListNode(5))
   .append(givenNode)
-  .append(new SinglyLinkedListNode(2));
+  .append(new LinkedListNode(2));
 deleteMiddleNode(givenNode);
 console.log(JSON.stringify(linkedList, null, 4));
 // {
@@ -41,11 +41,11 @@ console.log(JSON.stringify(linkedList, null, 4));
 //   }
 // }
 
-const linkedList2 = new SinglyLinkedListNode(1);
-const givenNode2 = new SinglyLinkedListNode(2);
+const linkedList2 = new LinkedListNode(1);
+const givenNode2 = new LinkedListNode(2);
 linkedList2
-  .append(new SinglyLinkedListNode(5))
-  .append(new SinglyLinkedListNode(3))
+  .append(new LinkedListNode(5))
+  .append(new LinkedListNode(3))
   .append(givenNode2);
 deleteMiddleNode(givenNode2);
 console.log(JSON.stringify(linkedList2, null, 4));
