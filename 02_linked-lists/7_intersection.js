@@ -8,8 +8,6 @@
  * intersecting.
  */
 
-import LinkedListNode from '../data-structures/LinkedListNode.js';
-
 // METHOD 1
 function findIntersection(head, otherHead) {
   traverseList(head, (node) => { node.isVisited = true });
@@ -87,38 +85,3 @@ function getKthNode(head, k) {
   }
   return currentNode;
 }
-
-
-// Test cases:
-const linkedList = new LinkedListNode(1);
-const commonNode = new LinkedListNode(2);
-linkedList
-  .append(new LinkedListNode(5))
-  .append(new LinkedListNode(3))
-  .append(commonNode)
-  .append(new LinkedListNode(3));
-const linkedList2 = new LinkedListNode(9);
-linkedList2
-  .append(new LinkedListNode(8))
-  .append(commonNode);
-console.log(findIntersection(linkedList, linkedList2));
-// {
-//   value: 2,
-//   next: { 
-//     value: 3, 
-//     next: null
-//   }
-// }
-
-const otherLinkedList = new LinkedListNode(1);
-otherLinkedList
-  .append(new LinkedListNode(5))
-  .append(new LinkedListNode(3))
-  .append(new LinkedListNode(2))
-  .append(new LinkedListNode(3));
-const otherLinkedList2 = new LinkedListNode(9);
-otherLinkedList2
-  .append(new LinkedListNode(8))
-  .append(new LinkedListNode(2));
-console.log(findIntersection(otherLinkedList, otherLinkedList2));
-// null

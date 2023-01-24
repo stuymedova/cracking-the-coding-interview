@@ -12,8 +12,6 @@
  * Output: C
  */
 
-import LinkedListNode from '../data-structures/LinkedListNode.js';
-
 // METHOD 1
 function detectLoop(head) {
   let currentNode = head;
@@ -40,20 +38,3 @@ function detectLoop2(head) {
     currentNode = currentNode.next;
   }
 }
-
-// Test case:
-const linkedList = new LinkedListNode(1);
-const node = new LinkedListNode(3);
-linkedList
-  .append(new LinkedListNode(5))
-  .append(node)
-  .append(new LinkedListNode(2))
-  .append(node);
-console.log(detectLoop(linkedList));
-// {
-//   value: 3,
-//   next: { 
-//     value: 2, 
-//     next: [Circular]
-//   }
-// }
