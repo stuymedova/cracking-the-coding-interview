@@ -3,15 +3,15 @@
 export default class TreeNode {
   constructor(value) {
     this.value = value;
-    this.leftChild = null;
-    this.rightChild = null;
+    this.left = null;
+    this.right = null;
   }
 
   append(node) {
     if (node.value <= this.value) {
-      this.leftChild = node;
+      this.left = node;
     } else {
-      this.rightChild = node;
+      this.right = node;
     }
     return this;
   }
@@ -20,9 +20,9 @@ export default class TreeNode {
     if (value === this.value) {
       return this;
     } else if (value < this.value) {
-      return this.leftChild ? this.leftChild.find(value) : null;
+      return this.left ? this.left.find(value) : null;
     } else if (value > this.value) {
-      return this.rightChild ? this.rightChild.find(value) : null;
+      return this.right ? this.right.find(value) : null;
     }
     return null;
   }

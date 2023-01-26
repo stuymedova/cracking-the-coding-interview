@@ -3,6 +3,8 @@
  * palindrome.
  */
 
+import LinkedListNode from '../data-structures/LinkedListNode.js';
+
 /**
  * Note: in this implementation node.data cannot be equal 
  * to NaN because NaN !== NaN (comparison operation would 
