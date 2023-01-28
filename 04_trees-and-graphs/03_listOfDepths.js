@@ -12,7 +12,7 @@ function createLevelLinkedList(root) {
     currentLevelList.append(root);
   }
 
-  while (currentLevelList.length !== 0) {
+  while (currentLevelList.head !== null) {
     // If the list at the previous level was not empty, 
     // add it to the collection of lists.
     result.push(currentLevelList);
