@@ -30,9 +30,9 @@
 - [ ] 3.6 - Animal Shelter
 
 #### Chapter 4 — Trees and Graphs
-- [ ] 4.1 - Route Between Nodes
-- [ ] 4.2 - Minimal Tree
-- [ ] 4.3 - List of Depths
+- [X] 4.1 - Route Between Nodes
+- [X] 4.2 - Minimal Tree
+- [X] 4.3 - List of Depths
 - [ ] 4.4 - Check Balanced
 - [ ] 4.5 - Validate BST
 - [ ] 4.6 - Successor
