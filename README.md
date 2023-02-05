@@ -44,7 +44,7 @@
 - [ ] 4.12 - Paths with Sum
 
 #### Chapter 8 — Recursion and Dynamic Programming
-- [ ] 8.1 - Triple Step
+- [X] 8.1 - Triple Step
 - [ ] 8.2 - Robot in a Grid
 - [ ] 8.3 - Magic Index
 - [ ] 8.4 - Power Set

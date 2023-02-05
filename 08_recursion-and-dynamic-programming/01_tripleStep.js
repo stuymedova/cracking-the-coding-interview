@@ -16,7 +16,7 @@ function tripleStep(numberOfSteps, memo = []) {
     memo[numberOfSteps] = 
       tripleStep(numberOfSteps - 1, memo) + 
       tripleStep(numberOfSteps - 2, memo) + 
-      tripleStep(numberOfSteps - 3, memo)
+      tripleStep(numberOfSteps - 3, memo);
   }
   return memo[numberOfSteps];
 }
