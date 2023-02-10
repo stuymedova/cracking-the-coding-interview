@@ -60,8 +60,8 @@
 - [ ] 8.14 - Boolean Eval
 
 #### Chapter 10 — Sorting and Searching
-- [ ] 10.1 - Sorted Merge
-- [ ] 10.2 - Group Anagrams
+- [X] 10.1 - Sorted Merge
+- [X] 10.2 - Group Anagrams
 - [ ] 10.3 - Search In Rotated Array
 - [ ] 10.4 - Sorted Search No Size
 - [ ] 10.5 - Sparse Search
