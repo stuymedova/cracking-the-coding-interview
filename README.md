@@ -15,7 +15,7 @@
 - [X] 2.1 - Remove Dups
 - [X] 2.2 - Return Kth to Last
 - [X] 2.3 - Delete Middle Node
-- [ ] 2.4 - Partition
+- [X] 2.4 - Partition
 - [ ] 2.5 - Sum Lists
 - [X] 2.6 - Palindrome
 - [X] 2.7 - Intersection
