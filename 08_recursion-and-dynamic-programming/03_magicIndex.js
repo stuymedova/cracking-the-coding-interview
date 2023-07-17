@@ -1,9 +1,9 @@
 /**
- * A magic index in an array A[1...n-1] is defined to be 
- * an index such that A[i] = i. Given a sorted array of 
- * distinct integers, write a method to find a magic 
+ * A magic index in an array A[1...n-1] is defined to be
+ * an index such that A[i] = i. Given a sorted array of
+ * distinct integers, write a method to find a magic
  * index, if one exists, in array A.
- * 
+ *
  * FOLLOW UP
  * What if the values are not distinct?
  */
@@ -27,7 +27,7 @@ function auxiliaryFindMagicIndex(givenArray, startIndex, endIndex) {
   }
 }
 
-// Test cases:
+// TEST CASES
 console.log(findMagicIndex([-1, 0, 2, 4, 9])); // 2
 console.log(findMagicIndex([0, 2, 4, 9])); // 0
 console.log(findMagicIndex([1, 2, 4, 9])); // null

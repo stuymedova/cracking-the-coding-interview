@@ -1,6 +1,6 @@
 /**
- * Implement an algorithm to determine if a string has 
- * all unique characters. What if you cannot use 
+ * Implement an algorithm to determine if a string has
+ * all unique characters. What if you cannot use
  * additional data structures?
  */
 
@@ -17,7 +17,7 @@ function isUniqueChars(givenString) {
   return true;
 }
 
-// Test cases:
+// TEST CASES
 console.log(isUniqueChars('abcd')); // true
 console.log(isUniqueChars('aAbB')); // true
 console.log(isUniqueChars('aabcd')); // false

@@ -40,7 +40,7 @@ function rotateMatrix(matrix) {
   return true;
 }
 
-// Test cases:
+// TEST CASES
 const matrix = [
   [1, 2, 3],
   [4, 5, 6],

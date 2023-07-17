@@ -1,5 +1,5 @@
 /**
- * Given two strings, write a method to decide if one is 
+ * Given two strings, write a method to decide if one is
  * a permutation of the other.
  */
 
@@ -29,11 +29,11 @@ function getRepresentation(givenString) {
     }
     representation[char] += 1;
   }
-  
+
   return representation;
 }
 
-// Test cases:
+// TEST CASES
 console.log(isPermutation('abcd', 'bcda')); // true
 console.log(isPermutation('abcd', 'ab')); // false
 console.log(isPermutation('abcd', 'cdfg')); // false

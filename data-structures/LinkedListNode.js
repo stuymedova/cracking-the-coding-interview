@@ -4,10 +4,11 @@ export class LinkedListNode {
   constructor(value) {
     this.value = value;
     this.next = null;
+    return this;
   }
 
   append(node) {
-    this.next = node;
-    return this.next;
+    node.next = this;
+    return node;
   }
 }

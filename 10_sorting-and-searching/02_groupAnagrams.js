@@ -1,5 +1,5 @@
 /**
- * Write a method to sort an array ot strings so that all 
+ * Write a method to sort an array ot strings so that all
  * tne anagrnms are next to each other.
  */
 
@@ -26,7 +26,7 @@ function sortItems(givenArray) {
     const array = [...givenString];
     return array.sort().join('');
   }
-  
+
   for (let i = 0; i < givenArray.length; i++) {
     givenArray[i] = sortString(givenArray[i]);
   }
@@ -48,6 +48,6 @@ function getRepresentation(givenArray) {
   return representation;
 }
 
-// Test cases:
+// TEST CASES
 console.log(groupAnagrams(['abc', 'crab', 'cba', 'brac', 'crib']))
 // [['abc', 'cba'], ['crab', 'brac'], ['crib']]

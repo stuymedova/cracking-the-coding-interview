@@ -1,9 +1,9 @@
 /**
- * Write a method to replace all spaces in a string with 
- * '%20'. You may assume that the string has sufficient 
- * space at the end to hold the additional characters, 
- * and that you are given the "true" length of the string. 
- * (Note: If implementing in Java, please use a character 
+ * Write a method to replace all spaces in a string with
+ * '%20'. You may assume that the string has sufficient
+ * space at the end to hold the additional characters,
+ * and that you are given the "true" length of the string.
+ * (Note: If implementing in Java, please use a character
  * array so that you can perform this operation in place).
  */
 
@@ -22,7 +22,7 @@ function URLify(givenString) {
   return URLifiedString;
 }
 
-// Test cases:
+// TEST CASES
 console.log(URLify('how to cook pancakes'));
 // how%20to%20cook%20pancakes
 console.log(URLify('what is the weather today'));
