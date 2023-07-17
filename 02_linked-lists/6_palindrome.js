@@ -1,13 +1,13 @@
 /**
- * Implement a function to check if a linked list is a 
+ * Implement a function to check if a linked list is a
  * palindrome.
  */
 
-import LinkedListNode from '../data-structures/LinkedListNode.js';
+import { LinkedListNode } from '../data-structures/LinkedListNode.js';
 
 /**
- * Note: in this implementation node.data cannot be equal 
- * to NaN because NaN !== NaN (comparison operation would 
+ * Note: in this implementation node.data cannot be equal
+ * to NaN because NaN !== NaN (comparison operation would
  * return false).
  */
 function isPalindrome(head) {

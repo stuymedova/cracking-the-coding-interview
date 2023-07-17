@@ -1,6 +1,6 @@
 // Tree Node (Binary Search Tree)
 
-export default class TreeNode {
+export class TreeNode {
   constructor(value) {
     this.value = value;
     this.left = null;
