@@ -1,12 +1,12 @@
 /**
- * Implement a MyQueue class which implements a queue 
+ * Implement a MyQueue class which implements a queue
  * using two stacks.
  */
 
 class MyQueue {
   constructor() {
-    this.stackNewest = new Stack;
-    this.stackOldest = new Stack;
+    this.stackNewest = new Stack();
+    this.stackOldest = new Stack();
   }
 
   add(value) {
