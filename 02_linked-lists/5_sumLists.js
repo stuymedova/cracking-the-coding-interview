@@ -14,7 +14,9 @@ function sumLists(head1, head2) {
 	let sumListNode = sumListDummyHead;
 
 	while (head1 !== null || head2 !== null || carry !== 0) {
-		const columnSum = (head1?.value || 0) + (head2?.value || 0) + carry;
+		const head1Value = head1?.value || 0;
+        const head2Value = head2?.value || 0;
+		const columnSum = head1Value + head2Value + carry;
 
 		sumListNode.next = new LinkedListNode(columnSum % 10);
 		carry = columnSum >= 10 ? 1 : 0;
