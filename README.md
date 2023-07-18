@@ -26,7 +26,7 @@
 - [X] 3.2 - Stack Min
 - [X] 3.3 - Stack of Plates
 - [X] 3.4 - Queue via Stacks
-- [ ] 3.5 - Sort Stack
+- [X] 3.5 - Sort Stack
 - [ ] 3.6 - Animal Shelter
 
 #### Chapter 4 — Trees and Graphs
