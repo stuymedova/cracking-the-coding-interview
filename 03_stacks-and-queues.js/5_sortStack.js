@@ -9,7 +9,7 @@
 
 import { Stack } from '../data-structures/Stack.js'
 
-// Implementation 1: two additional stacks.
+// IMPLEMENTATION 1: two additional stacks.
 function sortStack1(givenStack) {
 	// Sorted stack will contain elements in the reverse
 	// order.
@@ -40,7 +40,7 @@ function sortStack1(givenStack) {
 	return givenStack;
 }
 
-// Implementation 2: one additional stack.
+// IMPLEMENTATION 2: one additional stack.
 function sortStack2(givenStack) {
 	// Sorted stack will contain elements in the reverse
 	// order.
