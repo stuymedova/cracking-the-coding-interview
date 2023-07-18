@@ -6,11 +6,11 @@
  * two numbers and returns the sum as a linked list.
  */
 
-import { LinkedListNode } from '../data-structures/LinkedListNode.js';
+import { ListNode } from '../data-structures/ListNode.js';
 
 function sumLists(head1, head2) {
 	let carry = 0;
-	let sumListDummyHead = new LinkedListNode(0);
+	let sumListDummyHead = new ListNode(0);
 	let sumListNode = sumListDummyHead;
 
 	while (head1 !== null || head2 !== null || carry !== 0) {
@@ -18,7 +18,7 @@ function sumLists(head1, head2) {
         const head2Value = head2?.value || 0;
 		const columnSum = head1Value + head2Value + carry;
 
-		sumListNode.next = new LinkedListNode(columnSum % 10);
+		sumListNode.next = new ListNode(columnSum % 10);
 		carry = columnSum >= 10 ? 1 : 0;
 		sumListNode = sumListNode.next;
 
@@ -36,23 +36,23 @@ function sumLists(head1, head2) {
 // TEST CASES
 
 // 7 -> 1 -> 6
-const head1 = new LinkedListNode(6)
-	.append(new LinkedListNode(1))
-	.append(new LinkedListNode(7));
+const head1 = new ListNode(6)
+	.append(new ListNode(1))
+	.append(new ListNode(7));
 
 // 5 -> 9 -> 2
-const head2 = new LinkedListNode(2)
-	.append(new LinkedListNode(9))
-	.append(new LinkedListNode(5));
+const head2 = new ListNode(2)
+	.append(new ListNode(9))
+	.append(new ListNode(5));
 
 // 5 -> 9 -> 3
-const head3 = new LinkedListNode(3)
-	.append(new LinkedListNode(9))
-	.append(new LinkedListNode(5));
+const head3 = new ListNode(3)
+	.append(new ListNode(9))
+	.append(new ListNode(5));
 
 // 5 -> 9
-const head4 = new LinkedListNode(9)
-	.append(new LinkedListNode(5));
+const head4 = new ListNode(9)
+	.append(new ListNode(5));
 
 // 2 -> 1 -> 9
 const result = sumLists(head1, head2);

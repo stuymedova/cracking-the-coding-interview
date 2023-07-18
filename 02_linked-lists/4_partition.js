@@ -9,11 +9,11 @@
  * partitions.
  */
 
-import { LinkedListNode } from '../data-structures/LinkedListNode.js';
+import { ListNode } from '../data-structures/ListNode.js';
 
 function partition(head, x) {
-	const leftPartitionDummyHead = new LinkedListNode();
-    const rightPartitionDummyHead = new LinkedListNode();
+	const leftPartitionDummyHead = new ListNode();
+    const rightPartitionDummyHead = new ListNode();
 
     let currentNode = head;
     let leftPartitionNode = leftPartitionDummyHead;
@@ -21,11 +21,11 @@ function partition(head, x) {
 
     while (currentNode !== null) {
         if (currentNode.value >= x) {
-            rightPartitionNode.next = new LinkedListNode(currentNode.value);
+            rightPartitionNode.next = new ListNode(currentNode.value);
             rightPartitionNode = rightPartitionNode.next;
         }
         else {
-            leftPartitionNode.next = new LinkedListNode(currentNode.value);
+            leftPartitionNode.next = new ListNode(currentNode.value);
             leftPartitionNode = leftPartitionNode.next;
         }
         currentNode = currentNode.next;

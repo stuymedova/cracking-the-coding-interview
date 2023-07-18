@@ -3,7 +3,7 @@
  * palindrome.
  */
 
-import { LinkedListNode } from '../data-structures/LinkedListNode.js';
+import { ListNode } from '../data-structures/ListNode.js';
 
 /**
  * Note: in this implementation node.data cannot be equal
@@ -21,7 +21,7 @@ function reverseList(givenHead) {
   let head = null;
 
   while (givenHead !== null) {
-    const node = new LinkedListNode(givenHead.value);
+    const node = new ListNode(givenHead.value);
     node.next = head;
     head = node;
     givenHead = givenHead.next;
