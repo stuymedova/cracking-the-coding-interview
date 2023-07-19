@@ -27,7 +27,7 @@
 - [X] 3.3 - Stack of Plates
 - [X] 3.4 - Queue via Stacks
 - [X] 3.5 - Sort Stack
-- [ ] 3.6 - Animal Shelter
+- [X] 3.6 - Animal Shelter
 
 #### Chapter 4 — Trees and Graphs
 - [X] 4.1 - Route Between Nodes
