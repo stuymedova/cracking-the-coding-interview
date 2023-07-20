@@ -33,7 +33,7 @@
 - [X] 4.1 - Route Between Nodes
 - [X] 4.2 - Minimal Tree
 - [X] 4.3 - List of Depths
-- [ ] 4.4 - Check Balanced
+- [X] 4.4 - Check Balanced
 - [X] 4.5 - Validate BST
 - [ ] 4.6 - Successor
 - [ ] 4.7 - Build Order
