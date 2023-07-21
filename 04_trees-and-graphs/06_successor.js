@@ -5,7 +5,7 @@
  * parent.
  */
 
-function inOrderSuccessor(node) {
+function getInOrderSuccessor(node) {
 	if (node === null) {
 		return null;
 	}
