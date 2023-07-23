@@ -50,7 +50,7 @@ function orderProjects(projects) {
 			continue;
 		}
 
-		// Otherwise, add the node to build order and
+		// Otherwise, add the node value to build order and
 		// enqueue its children.
 		buildOrder.push(node.value);
 
