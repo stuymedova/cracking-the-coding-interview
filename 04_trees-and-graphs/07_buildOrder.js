@@ -10,6 +10,14 @@
 
 function findBuildOrder(projects, dependencies) {
 	const dependencyGraph = buildDependencyGraph(projects, dependencies);
+
+	// A sneaky way to detect cycle in a graph
+	try {
+		JSON.stringify(dependencyGraph);
+	} catch {
+		return [];
+	}
+
 	return orderProjects(dependencyGraph.nodes);
 }
 
@@ -28,7 +36,7 @@ function buildDependencyGraph(projects, dependencies) {
 }
 
 function orderProjects(projects) {
-	const independentNodes = getIndependentProjects(projects);
+	const independentNodes = getIndependentNodes(projects);
 	const queue = [...independentNodes];
 	const buildOrder = [];
 
@@ -61,7 +69,7 @@ function orderProjects(projects) {
 	return buildOrder;
 }
 
-function getIndependentProjects(nodes) {
+function getIndependentNodes(nodes) {
 	const independentNodes = nodes.filter((node) => {
 		return node.weight === 0;
 	});
