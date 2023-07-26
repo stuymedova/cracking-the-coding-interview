@@ -47,7 +47,7 @@
 - [X] 8.1 - Triple Step
 - [X] 8.2 - Robot in a Grid
 - [X] 8.3 - Magic Index
-- [ ] 8.4 - Power Set
+- [X] 8.4 - Power Set
 - [ ] 8.5 - Recursive Multiply
 - [ ] 8.6 - Towers of Hanoi
 - [ ] 8.7 - Permutations without Dups
