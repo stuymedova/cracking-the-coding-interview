@@ -1,22 +1,51 @@
 /**
- * Implement a function to check if a binary tree is a 
+ * Implement a function to check if a binary tree is a
  * binary search tree.
  */
 
-function validateBST(root) {
-  return validateNode(root, null, null);
+// IMPLEMENTATION 1: IN-ORDER TRAVERSAL
+function isValidBST(root) {
+	const treeValues = traverseInOrder(root);
+	return isAscending(treeValues);
+};
+
+function traverseInOrder(node, nodes = []) {
+	if (node === null) {
+		return nodes;
+	}
+	traverseInOrder(node.left, nodes);
+	nodes.push(node.val);
+	traverseInOrder(node.right, nodes);
+
+	return nodes;
 }
 
-function validateNode(node, min, max) {
-  if (node === null) {
-    return true;
-  }
+function isAscending(givenArray) {
+	let prevValue = Number.MIN_SAFE_INTEGER;
 
-  if ((min !== null && node.value <= min) ||
-     (max !== null && node.value > max)) {
-    return false
-  }
-
-  return validateNode(node.left, min, node.value) && 
-         validateNode(node.right, node.value, max);
+	for (const value of givenArray) {
+		if (value <= prevValue) {
+			return false;
+		}
+		prevValue = value;
+	}
+	return true;
 }
+
+// IMPLEMENTATION 2: RECURSION
+function isValidBST2(
+	node,
+	min = Number.MIN_SAFE_INTEGER,
+	max = Number.MAX_SAFE_INTEGER
+) {
+	if (node === null) {
+		return true;
+	}
+	if (node.val <= min || node.val > max) {
+		return false;
+	}
+	return (
+		isValidBST(node.left, min, node.val) &&
+		isValidBST(node.right, node.val, max)
+	);
+};
