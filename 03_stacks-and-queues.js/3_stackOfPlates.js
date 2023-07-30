@@ -1,108 +1,87 @@
 /**
- * Imagine a (literal) stack of plates. If the stack gets 
- * too high, it might topple. Therefore, in real life, we 
- * would likely start a new stack when the previous stack 
- * exceeds some threshold. Implement a data structure 
- * SetOfStacks that mimics this. SetOfStacks should be 
- * composed of several stacks and should create a new 
- * stack once the previous one exceeds capacity. 
- * SetOfStacks.push() and SetOfStacks.pop() should behave 
- * identically to a single stack (that is, pop() should 
- * return the same values as it would if there were just a 
+ * Imagine a (literal) stack of plates. If the stack gets
+ * too high, it might topple. Therefore, in real life, we
+ * would likely start a new stack when the previous stack
+ * exceeds some threshold. Implement a data structure
+ * SetOfStacks that mimics this. SetOfStacks should be
+ * composed of several stacks and should create a new
+ * stack once the previous one exceeds capacity.
+ * SetOfStacks.push() and SetOfStacks.pop() should behave
+ * identically to a single stack (that is, pop() should
+ * return the same values as it would if there were just a
  * single stack).
- * 
+ *
  * FOLLOW UP
- * Implement a function popAt(int index) which performs a 
+ * Implement a function popAt(int index) which performs a
  * pop operation on a specific sub­ stack.
  */
 
-class SetOfStacks {
-  constructor(threshold) {
-    this.stack = new Stack();
-    this.stackIndex = 0;
-    this.threshold = threshold;
-  }
+class StackOfPlates {
+	constructor(capacity) {
+		if (capacity <= 0) {
+			throw new Error('Invalid capacity.');
+		}
+		this.capacity = capacity;
+		this.stacks = [new Stack(capacity)];
+	}
 
-  push(value) {
-    if (this.stack.length > this.threshold) {
-      const newStack = new Stack();
-      this.stack.next = newStack;
-      newStack.previous = this.stack;
-      this.stack = newStack;
-      this.stackIndex += 1
-      this.stack.stackIndex = this.stackIndex;
-    }
-    this.stack.push(value);
-    return this;
-  }
+	push(value) {
+		for (const stack of this.stacks) {
+			if (stack.push(value)) {
+				return;
+			}
+		}
+		this.stacks.push(new Stack(this.capacity));
+		this.stacks[this.stacks.length - 1].push(value);
+	}
 
-  pop() {
-    const removedElement = this.stack.pop();
-    if (this.stack.length === 0) {
-      this.stack = this.stack.previous;
-      this.stack.next = null;
-      this.stackIndex -= 1;
-      this.stack.stackIndex = this.stackIndex;
-    }
-    return removedElement;
-  }
+	pop() {
+		const removedItem = this.#getLast().pop();
 
-  popAt(index) {
-    if (index === this.stackIndex) {
-      return this.pop();
-    }
+		while (this.#getLast().isEmpty() && this.stacks.length > 1) {
+			this.stacks.pop();
+		}
+		return removedItem || -1;
+	}
 
-    let currentStack = this.stack;    
-    while (currentStack.stackIndex !== index) {
-      currentStack = currentStack.previous;
-    }
-    const removedElement = currentStack.pop();
-    if (this.stack.length === 0) {
-      this.stack = this.stack.previous;
-      this.stack.next = null;
-      this.stackIndex -= 1;
-      this.stack.stackIndex = this.stackIndex;
-    }
-    return removedElement;
-  }
+	popAtStack(index) {
+		const chosenStack = this.stacks[index];
+        if (!chosenStack) {
+            return -1;
+        }
+		if (chosenStack === this.#getLast()) {
+			return this.pop();
+		}
+		const removedItem = chosenStack.pop();
+		return removedItem || -1;
+	}
 
-  peek() {
-    return this.stack.peek();
-  }
+	#getLast() {
+		return this.stacks[this.stacks.length - 1];
+	}
 }
 
 class Stack {
-  constructor() {
-    this.stack = [];
-    this.length = 0;
-    this.previous = null;
-    this.next = null;
-    this.stackIndex = null;
-  }
+	constructor(capacity) {
+		this.stack = [];
+		this.capacity = capacity;
+		return this;
+	}
 
-  push(value) {
-    this.stack.push(value);
-    this.length += 1;
-    return this;
-  }
+	push(value) {
+		if (this.stack.length === this.capacity) {
+			return false;
+		}
+		this.stack.push(value);
+		return true;
+	}
 
-  pop() {
-    const removedElement = this.stack.pop();
-    this.length -= 1;
-    if (this.next) {
-      this.rebalance();
-    }
-    return removedElement;
-  }
+	pop() {
+		const removedItem = this.stack.pop();
+		return removedItem;
+	}
 
-  peek() {
-    return this.stack[this.length - 1];
-  }
-
-  rebalance() {
-    if (this.next) {
-      this.stack.push(this.next.stack.shift());
-      this.next.rebalance();
-    }
-  }
+	isEmpty() {
+		return this.stack.length === 0;
+	}
 }
