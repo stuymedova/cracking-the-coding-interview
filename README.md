@@ -50,7 +50,7 @@
 - [X] 8.4 - Power Set
 - [X] 8.5 - Recursive Multiply
 - [ ] 8.6 - Towers of Hanoi
-- [ ] 8.7 - Permutations without Dups
+- [X] 8.7 - Permutations without Dups
 - [ ] 8.8 - Permutations with Dups
 - [ ] 8.9 - Parens
 - [ ] 8.10 - Paint Fill
