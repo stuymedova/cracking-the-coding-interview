@@ -41,7 +41,7 @@
 - [ ] 4.9 - BST Sequences
 - [X] 4.10 - Check Subtree
 - [ ] 4.11 - Random Node
-- [ ] 4.12 - Paths with Sum
+- [X] 4.12 - Paths with Sum
 
 #### Chapter 8 — Recursion and Dynamic Programming
 - [X] 8.1 - Triple Step
