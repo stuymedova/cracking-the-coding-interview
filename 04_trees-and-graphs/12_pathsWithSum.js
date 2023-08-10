@@ -7,7 +7,7 @@
  * (traveling only from parent nodes to child nodes).
  */
 
-var countPathsWithSum = function(root, targetSum) {
+function countPathsWithSum(root, targetSum) {
     if (root === null) {
         return 0;
     }
@@ -15,7 +15,7 @@ var countPathsWithSum = function(root, targetSum) {
     return  countPathsWithSumFromNode(root, targetSum) +
             countPathsWithSum(root.left, targetSum) +
             countPathsWithSum(root.right, targetSum);
-};
+}
 
 function countPathsWithSumFromNode(node, targetSum) {
     if (node === null) {

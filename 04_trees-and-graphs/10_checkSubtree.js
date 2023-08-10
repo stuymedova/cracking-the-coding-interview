@@ -15,9 +15,9 @@ function isSubtree(root, subroot) {
 }
 
 // IMPLEMENTATION 2
-function isSubtree(root, subroot) {
-	let string1 = ',' + traversePreOrder(root).join() + ',';
-	let string2 = ',' + traversePreOrder(subroot).join() + ',';
+function isSubtree2(root, subroot) {
+	const string1 = ',' + traversePreOrder(root).join() + ',';
+	const string2 = ',' + traversePreOrder(subroot).join() + ',';
 
 	return string1.includes(string2);
 }
@@ -34,7 +34,7 @@ function traversePreOrder(node, nodes = []) {
 }
 
 // IMPLEMENTATION 3
-function isSubtree(root, subroot) {
+function isSubtree3(root, subroot) {
 	if (root === null || subroot === null) {
 		return false;
 	}
@@ -42,8 +42,8 @@ function isSubtree(root, subroot) {
 		return true;
 	}
 	return (
-		isSubtree(root.left, subroot) ||
-		isSubtree(root.right, subroot)
+		isSubtree3(root.left, subroot) ||
+		isSubtree3(root.right, subroot)
 	);
 }
 
