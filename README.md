@@ -40,7 +40,7 @@
 - [X] 4.8 - First Common Ancestor
 - [ ] 4.9 - BST Sequences
 - [X] 4.10 - Check Subtree
-- [ ] 4.11 - Random Node
+- [X] 4.11 - Random Node
 - [X] 4.12 - Paths with Sum
 
 #### Chapter 8 — Recursion and Dynamic Programming
