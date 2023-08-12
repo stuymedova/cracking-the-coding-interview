@@ -12,16 +12,16 @@
 
 function getIndexOf(x, list) {
 	let min = 0;
-	let max = getLength(list);
+	let max = getLength(list) - 1;
 
 	while (min <= max) {
 		const mid = min + Math.floor((max - min) / 2);
 
 		if (list.elementAt(mid) > x) {
-			min = mid + 1;
+			max = mid - 1;
 		}
 		else if (list.elementAt(mid) < x) {
-			max = mid - 1;
+			min = mid + 1;
 		}
 		else {
 			return mid;
@@ -61,6 +61,6 @@ class Listy extends Array {
 		return this[index];
 	}
 }
-const listy = new Listy(0, 1, 3, 5, 7, 12);
+const listy = new Listy(0, 1, 3, 5, 7);
 const result = getIndexOf(5, listy);
 console.log(result);

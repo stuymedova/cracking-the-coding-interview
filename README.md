@@ -63,7 +63,7 @@
 - [X] 10.1 - Sorted Merge
 - [X] 10.2 - Group Anagrams
 - [X] 10.3 - Search In Rotated Array
-- [ ] 10.4 - Sorted Search No Size
+- [X] 10.4 - Sorted Search No Size
 - [ ] 10.5 - Sparse Search
 - [ ] 10.6 - Sort Big File
 - [ ] 10.7 - Missing Int
