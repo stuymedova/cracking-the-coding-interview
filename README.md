@@ -66,7 +66,7 @@
 - [X] 10.4 - Sorted Search No Size
 - [X] 10.5 - Sparse Search
 - [ ] 10.6 - Sort Big File
-- [ ] 10.7 - Missing Int
+- [X] 10.7 - Missing Int
 - [ ] 10.8 - Find Duplicates
 - [ ] 10.9 - Sorted Matrix Search
 - [ ] 10.10 - Rank From Stream
