@@ -64,7 +64,7 @@
 - [X] 10.2 - Group Anagrams
 - [X] 10.3 - Search In Rotated Array
 - [X] 10.4 - Sorted Search No Size
-- [ ] 10.5 - Sparse Search
+- [X] 10.5 - Sparse Search
 - [ ] 10.6 - Sort Big File
 - [ ] 10.7 - Missing Int
 - [ ] 10.8 - Find Duplicates
