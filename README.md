@@ -67,7 +67,7 @@
 - [X] 10.5 - Sparse Search
 - [ ] 10.6 - Sort Big File
 - [X] 10.7 - Missing Int
-- [ ] 10.8 - Find Duplicates
+- [X] 10.8 - Find Duplicates
 - [ ] 10.9 - Sorted Matrix Search
 - [ ] 10.10 - Rank From Stream
 - [ ] 10.11 - Peaks And Valleys
