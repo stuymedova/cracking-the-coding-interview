@@ -53,7 +53,7 @@
 - [X] 8.7 - Permutations without Dups
 - [X] 8.8 - Permutations with Dups
 - [X] 8.9 - Parens
-- [ ] 8.10 - Paint Fill
+- [X] 8.10 - Paint Fill
 - [ ] 8.11 - Coins
 - [ ] 8.12 - Eight Queens
 - [ ] 8.13 - Stack Boxes
