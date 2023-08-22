@@ -3,6 +3,7 @@
  * with empty strings, write a method to find the location
  * of a given string.
  */
+
 function sparseSearch(array, x, first = 0, last = array.length - 1) {
 	if (first > last) {
 		return -1;
