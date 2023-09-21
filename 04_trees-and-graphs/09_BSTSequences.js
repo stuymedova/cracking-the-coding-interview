@@ -23,22 +23,22 @@ function getBstSequences(node) {
 	return sequences;
 
 	function recurse(nodes, travelledSet) {
-		let noChild = true;
+		let isLeaf = true;
 		nodes.forEach((node) => {
 			if (node.left !== null && !travelledSet.has(node.left.value)) {
-				noChild = false;
+				isLeaf = false;
 				travelledSet.add(node.left.value);
 				recurse(nodes.concat([node.left]), travelledSet);
 				travelledSet.delete(node.left.value);
 			}
 			if (node.right !== null && !travelledSet.has(node.right.value)) {
-				noChild = false;
+				isLeaf = false;
 				travelledSet.add(node.right.value);
 				recurse(nodes.concat([node.right]), travelledSet);
 				travelledSet.delete(node.right.value);
 			}
 		});
-		if (noChild) {
+		if (isLeaf) {
 			sequences.push(nodes.map(node => node.value));
 		}
 	}
