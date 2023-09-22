@@ -10,7 +10,6 @@ import { BSTNode } from '../data-structures/BSTNode.js';
 
 function printBstSequences(node) {
 	const result = getBstSequences(node);
-
 	result.forEach((arr) => {
 		console.log(arr);
 	});
