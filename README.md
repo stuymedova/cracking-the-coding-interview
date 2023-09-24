@@ -68,6 +68,6 @@
 - [ ] 10.6 - Sort Big File
 - [X] 10.7 - Missing Int
 - [X] 10.8 - Find Duplicates
-- [ ] 10.9 - Sorted Matrix Search
+- [X] 10.9 - Sorted Matrix Search
 - [ ] 10.10 - Rank From Stream
-- [ ] 10.11 - Peaks And Valleys
+- [X] 10.11 - Peaks And Valleys
