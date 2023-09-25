@@ -49,7 +49,7 @@ function swapInPlace(givenArray, i, j) {
 	givenArray[j] = temp;
 }
 
-// TEST
+// TEST CASES
 const res = peaksAndValleysSort([5, 3, 1, 2, 3]);
 console.log(res);
 

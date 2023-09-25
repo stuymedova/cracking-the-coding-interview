@@ -43,7 +43,7 @@ function getBstSequences(node) {
 	}
 };
 
-/* TEST */
+// TEST CASES
 const root = new BSTNode(4)
 	.insert(2)
 	.insert(6)

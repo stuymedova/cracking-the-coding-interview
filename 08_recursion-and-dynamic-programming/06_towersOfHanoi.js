@@ -64,7 +64,7 @@ class Tower {
 	}
 }
 
-/* TEST */
+// TEST CASES
 var towers = new TowersOfHanoi(5);
 console.log(towers);
 towers.solve();
