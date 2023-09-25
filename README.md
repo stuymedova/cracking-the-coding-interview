@@ -54,7 +54,7 @@
 - [X] 8.8 - Permutations with Dups
 - [X] 8.9 - Parens
 - [X] 8.10 - Paint Fill
-- [ ] 8.11 - Coins
+- [X] 8.11 - Coins
 - [ ] 8.12 - Eight Queens
 - [ ] 8.13 - Stack Boxes
 - [ ] 8.14 - Boolean Eval
