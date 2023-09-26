@@ -19,20 +19,20 @@ function countCombinations(value, coin = 1) {
 		memo[key] = 1;
 		return memo[key];
 	}
-	let ways = 0;
+	let count = 0;
 	if (coin <= 1) {
-		ways += countCombinations(value - 1, 1);
+		count += countCombinations(value - 1, 1);
 	}
 	if (coin <= 5) {
-		ways += countCombinations(value - 5, 5);
+		count += countCombinations(value - 5, 5);
 	}
 	if (coin <= 10) {
-		ways += countCombinations(value - 10, 10);
+		count += countCombinations(value - 10, 10);
 	}
 	if (coin <= 25) {
-		ways += countCombinations(value - 25, 25);
+		count += countCombinations(value - 25, 25);
 	}
-	memo[key] = ways;
+	memo[key] = count;
 	return memo[key];
 };
 
