@@ -10,7 +10,6 @@
 
 function computeTallestStack(boxes) {
 	boxes = [...boxes].sort(compareHeight);
-	boxes.sort(compareWidthAndDepth);
 	const memo = {};
 	let restHeight = boxes.reduce((acc, box) => {
 		return acc + box.height;
@@ -47,12 +46,6 @@ function computeTallestStack(boxes) {
 
 function compareHeight(a, b) {
 	if (a.height > b.height) {
-		return -1;
-	}
-	return 1;
-}
-function compareWidthAndDepth(a, b) {
-	if (a.width > b.width && a.depth > b.depth) {
 		return -1;
 	}
 	return 1;
